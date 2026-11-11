@@ -1,5 +1,5 @@
 :root{--paper:#f6f5f1;--card:#fff;--ink:#202d2d;--muted:#687776;--line:#e0e5df;--teal:#247364;--mint:#e7f2eb;--coral:#b97158}
-html{scroll-padding-top:96px}body{background:var(--paper);font-size:16px;line-height:1.75}
+html{scroll-padding-top:80px}body{background:var(--paper);font-size:16px;line-height:1.75}
 .site-header{background:rgba(255,255,253,.94);border-bottom:1px solid var(--line)}
 .header-inner{max-width:1380px;height:68px;gap:42px;padding:0 32px}
 .brand{font-family:'Playfair Display',Georgia,serif;font-size:29px;letter-spacing:-.055em;color:#21483d}
@@ -21,7 +21,7 @@ html{scroll-padding-top:96px}body{background:var(--paper);font-size:16px;line-he
 .course-eyebrow{font:700 11px 'DM Mono',Consolas,monospace;letter-spacing:.15em;color:var(--teal)}
 .course-intro h1,.practice-intro h1{font:600 clamp(48px,6vw,76px)/1.1 'Playfair Display',Georgia,serif;letter-spacing:-.055em;margin:17px 0 20px;color:#19382f}
 .course-intro p,.practice-intro p{font-size:18px;line-height:1.8;color:#536663;margin:0;max-width:720px}
-.topic{padding:62px 0 66px;border-bottom:1px solid #d9e2da;scroll-margin-top:88px}
+.topic{padding:62px 0 66px;border-bottom:1px solid #d9e2da;scroll-margin-top:0}
 .topic-kicker{display:flex;align-items:center;gap:12px;color:#7a9587;font:600 11px 'DM Mono',Consolas,monospace;text-transform:uppercase;letter-spacing:.08em}
 .topic-kicker span:first-child{display:grid;place-items:center;width:32px;height:32px;border:1px solid #bfd5c4;border-radius:50%;color:var(--teal)}
 .topic h2{font:600 clamp(33px,4vw,47px)/1.18 'Playfair Display',Georgia,serif;letter-spacing:-.035em;margin:21px 0 14px;color:#1d3932}
@@ -59,6 +59,7 @@ html{scroll-padding-top:96px}body{background:var(--paper);font-size:16px;line-he
 .search-dialog{background:#fff}.search-result{display:flex;flex-direction:column}
 .toast{z-index:100}
 .bayes-bars{display:grid;gap:11px;margin:23px 0}.bayes-bars>div{display:grid;grid-template-columns:145px 1fr;gap:12px;align-items:center;font-size:12px;color:#426657}.bayes-bars b{display:block;height:17px;border-radius:5px;background:#2d806d;min-width:3px;max-width:100%;transition:width .2s}.bayes-bars>div:nth-child(2) b{background:#d6a46b}
+.note-table-wrap{overflow-x:auto;margin:26px 0 34px;border:1px solid #dce6de;border-radius:13px;background:#fff}.note-table{border-collapse:collapse;width:100%;min-width:450px;font-size:13px;line-height:1.6}.note-table th,.note-table td{text-align:left;vertical-align:top;padding:12px 15px;border-bottom:1px solid #e8eee8}.note-table th{background:#e9f2eb;color:#275b4c;font-size:11px;letter-spacing:.02em}.note-table tr:last-child td{border-bottom:0}.note-table td:first-child{font-weight:700;color:#29564c}
 @media(max-width:1000px){.reading-shell{grid-template-columns:190px minmax(0,1fr);gap:45px;padding:0 30px}.header-inner{gap:20px}.header-nav{gap:14px}}
 @media(max-width:720px){html{scroll-padding-top:105px}.header-inner{height:auto;min-height:58px;display:flex;flex-wrap:wrap;gap:0 12px;padding:8px 18px 0}.brand{font-size:24px}.header-nav{display:flex;order:3;width:100%;gap:18px;overflow-x:auto;white-space:nowrap;margin:0}.header-nav a{padding:10px 0 8px;font-size:12px}.search-trigger{margin-left:auto;min-width:40px;padding:5px 9px}.search-trigger span,.search-trigger kbd{display:none}.reading-shell{display:block;padding:0 18px}.contents{border:0;border-bottom:1px solid var(--line)}.contents-sticky{position:static;padding:13px 0}.contents-label,.aside-practice{display:none}.contents nav{flex-direction:row;overflow-x:auto;gap:5px}.contents nav a{min-width:max-content;padding:7px 9px;font-size:11px}.contents nav a span{display:none}.course-intro{padding:38px 0 36px}.course-intro h1,.practice-intro h1{font-size:47px}.course-intro p,.practice-intro p,.topic-lead{font-size:16px}.topic{padding:43px 0 49px}.topic h2{font-size:36px}.prose>p{font-size:15px}.formula-card{padding:17px}.formula-text{font-size:18px}.practice-page{padding:0 18px 75px}.practice-intro{padding:37px 0}.practice-list{grid-template-columns:1fr}.example-row{grid-template-columns:1fr}.lab-controls label{display:flex}}
 @media(max-width:720px){.contents nav a{display:block;white-space:nowrap;width:max-content;min-width:0;flex:0 0 auto}.contents nav{scrollbar-width:thin}.topic,.reading,.practice-page{min-width:0;overflow-wrap:anywhere}}
