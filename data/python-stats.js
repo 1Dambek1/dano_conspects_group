@@ -5,6 +5,7 @@ window.COURSES.push({
   lessons:[
     {id:'scipy-t',title:'t-тесты в SciPy',lead:'SciPy возвращает статистику и p-value. Сначала выбери дизайн исследования.',blocks:[
       {type:'p',html:'Одна группа против числа → <code>ttest_1samp</code>. Две независимые группы → <code>ttest_ind(..., equal_var=False)</code>, то есть тест Уэлча. Одни и те же объекты до и после → <code>ttest_rel</code>.'},
+      {type:'callout',label:'Установка библиотек',html:'Если пакетов ещё нет: <code>python -m pip install numpy pandas scipy statsmodels scikit-learn matplotlib</code>.'},
       {type:'code',language:'python',code:'from scipy import stats\n\none = stats.ttest_1samp([9, 10, 11, 12, 13], popmean=10)\nprint(one.statistic, one.pvalue)\n\na = [12, 14, 13, 16]\nb = [10, 11, 15, 12]\nindependent = stats.ttest_ind(a, b, equal_var=False)\npaired = stats.ttest_rel(a, b)',output:'Результаты содержат statistic и pvalue. Для парного теста элементы двух списков должны соответствовать одним и тем же объектам.'},
       {type:'p',html:'Заранее сформулируй H₀ и альтернативу. Малое p-value говорит о несовместимости данных с H₀ при допущениях теста; оно не показывает вероятность истинности H₀.'},
       {type:'example',title:'Один набор измерений',given:'Время работы: 9, 10, 11, 12, 13 часов. H₀: среднее 10.',find:'Функцию SciPy.',steps:['Один числовой набор сравниваем с фиксированным числом.','Выбираем stats.ttest_1samp.','Передаём массив и popmean=10, читаем statistic и pvalue.'],answer:'<code>stats.ttest_1samp([9,10,11,12,13], popmean=10)</code>.'},

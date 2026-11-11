@@ -15,6 +15,7 @@
   function updateProgress(){document.getElementById('header-progress').textContent = completed.size+' / '+totalLessons;}
   function toast(message){const t=document.getElementById('toast');t.textContent=message;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2300);}
   function typeset(){if(window.MathJax && window.MathJax.typesetPromise){window.MathJax.typesetPromise([app]).catch(()=>{});}}
+  window.danoTypeset=typeset;
   function heroChart(){
     const pts=[[28,177],[93,162],[154,151],[215,135],[276,119],[337,105],[398,81],[459,72],[520,51]];
     const dots=pts.map(([x,y],i)=>'<circle cx="'+x+'" cy="'+y+'" r="'+(i===6?6:4.5)+'" fill="'+(i===6?'#d86f52':'#17645c')+'"/>').join('');

@@ -21,6 +21,8 @@ python -m http.server 8000
 
 Затем откройте `http://localhost:8000`. Сборка и установка пакетов не нужны. Формулы отображаются через MathJax CDN, для них требуется интернет.
 
+Для запуска примеров Python установите библиотеки: `python -m pip install numpy pandas scipy statsmodels scikit-learn matplotlib`.
+
 ## Публикация
 
 GitHub Actions публикует статические файлы на GitHub Pages после отправки изменений в `main`. В настройках репозитория Pages должен быть выбран источник **GitHub Actions**.
