@@ -1,5 +1,7 @@
 # Дано — конспекты по статистике и Python
 
+**Сайт:** https://1dambek1.github.io/dano_conspects_group/
+
 Статический учебный сайт на русском языке: статистика, базовый Python, pandas, статистика в Python, NumPy и scikit-learn.
 
 ## Что внутри
