@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="Понятные интерактивные конспекты по статистике, Python, pandas, NumPy и машинному обучению.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Дано — конспекты по статистике и Python</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>window.MathJax = {tex: {inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="data/statistics.js"></script>
+  <script defer src="data/python.js"></script>
+  <script defer src="data/pandas.js"></script>
+  <script defer src="data/python-stats.js"></script>
+  <script defer src="data/numpy-sklearn.js"></script>
+  <script defer src="labs.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Дано — главная"><span class="brand-mark">∑</span><span class="brand-word">дано<span class="brand-dot">.</span></span></a>
+      <nav class="header-nav" aria-label="Главная навигация"><a href="#home">Главная</a><a href="#statistics">Конспекты</a><a href="#practice">Практика</a></nav>
+      <div class="header-actions"><button class="search-trigger" id="search-trigger" type="button" aria-label="Поиск по конспектам"><span class="search-icon" aria-hidden="true"></span><span>Поиск</span><kbd>Ctrl K</kbd></button><span class="header-progress" id="header-progress" title="Изученные темы">0 / 20</span></div>
+    </div>
+  </header>
+  <div id="search-overlay" class="search-overlay" hidden><div class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title"><div class="search-head"><span id="search-title">Найти тему</span><button id="search-close" type="button" aria-label="Закрыть поиск">×</button></div><input id="search-input" type="search" placeholder="Например, t-тест, циклы, groupby…" autocomplete="off"><div id="search-results" class="search-results"></div></div></div>
+  <main id="app"></main>
+  <footer class="site-footer"><div class="footer-inner"><div><strong>дано.</strong><p>Короткая теория, разборы и практика в одном месте.</p></div><div class="footer-links"><a href="#home">Главная</a><a href="#statistics">Статистика</a><a href="#python">Python</a><a href="#pandas">pandas</a><a href="#python-stats">Статистика в Python</a><a href="#numpy-sklearn">NumPy и sklearn</a></div><div class="footer-source"><span>Справка по библиотекам</span><a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener">Python</a><a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener">pandas</a><a href="https://numpy.org/doc/stable/" target="_blank" rel="noopener">NumPy</a><a href="https://docs.scipy.org/doc/scipy/reference/stats.html" target="_blank" rel="noopener">SciPy</a><a href="https://www.statsmodels.org/stable/regression" target="_blank" rel="noopener">statsmodels</a><a href="https://scikit-learn.org/stable/" target="_blank" rel="noopener">scikit-learn</a></div></div><div class="footer-bottom">Учебные примеры и данные на сайте вымышлены. © Дано</div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
