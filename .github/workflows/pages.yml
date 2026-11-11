@@ -26,7 +26,7 @@ jobs:
       - name: Prepare static files
         run: |
           mkdir -p dist/data
-          cp index.html styles.css app.js labs.js favicon.svg student_scores_80.csv dist/
+          cp index.html styles.css notes.css app.js labs.js favicon.svg student_scores_80.csv dist/
           cp data/*.js dist/data/
       - uses: actions/upload-pages-artifact@v3
         with:

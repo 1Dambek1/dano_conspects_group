@@ -1,3 +1,4 @@
+window.COURSES = window.COURSES || [];
 window.COURSES.push({
   id:'python',number:'02',title:'Python с нуля',icon:'{ }',tint:'#e9e9f1',
   lead:'Переменные, типы данных, списки, циклы и функции — спокойно и на коротких примерах.',

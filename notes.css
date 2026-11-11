@@ -1,0 +1,64 @@
+:root{--paper:#f6f5f1;--card:#fff;--ink:#202d2d;--muted:#687776;--line:#e0e5df;--teal:#247364;--mint:#e7f2eb;--coral:#b97158}
+html{scroll-padding-top:96px}body{background:var(--paper);font-size:16px;line-height:1.75}
+.site-header{background:rgba(255,255,253,.94);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1380px;height:68px;gap:42px;padding:0 32px}
+.brand{font-family:'Playfair Display',Georgia,serif;font-size:29px;letter-spacing:-.055em;color:#21483d}
+.brand span{color:var(--coral)}.header-nav{gap:25px;align-items:center}
+.header-nav a{font-size:13px;color:#5d6c66;font-weight:700;padding:22px 0 19px;border-bottom:3px solid transparent}
+.header-nav a:hover,.header-nav a.active{color:var(--teal);border-color:var(--teal)}
+.search-trigger{min-width:158px;margin-left:auto;background:#f7f8f4;font-size:13px;justify-content:flex-start}
+.search-trigger kbd{margin-left:auto}
+.reading-shell{max-width:1310px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:248px minmax(0,760px);gap:90px;justify-content:center}
+.contents{border-right:1px solid var(--line)}.contents-sticky{position:sticky;top:101px;padding:44px 22px 24px 0}
+.contents-label{display:block;font:700 10px 'DM Mono',Consolas,monospace;color:#8a9790;letter-spacing:.12em;text-transform:uppercase;margin:0 0 17px}
+.contents nav{display:flex;flex-direction:column;gap:5px}
+.contents nav a{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;color:#526762;font-size:12px;font-weight:700;line-height:1.45;padding:9px 10px;border-radius:8px;transition:background .18s,color .18s,transform .18s}
+.contents nav a:hover{background:#e7efe9;color:var(--teal);transform:translateX(3px)}
+.contents nav a span{font:500 10px 'DM Mono',Consolas,monospace;color:#9aaa9e;padding-top:2px}
+.aside-practice{display:block;border-top:1px solid var(--line);margin-top:18px;padding:18px 10px;color:var(--teal);font-size:12px;font-weight:800}
+.reading{padding-bottom:105px;min-width:0}
+.course-intro{padding:64px 0 55px;border-bottom:1px solid var(--line)}
+.course-eyebrow{font:700 11px 'DM Mono',Consolas,monospace;letter-spacing:.15em;color:var(--teal)}
+.course-intro h1,.practice-intro h1{font:600 clamp(48px,6vw,76px)/1.1 'Playfair Display',Georgia,serif;letter-spacing:-.055em;margin:17px 0 20px;color:#19382f}
+.course-intro p,.practice-intro p{font-size:18px;line-height:1.8;color:#536663;margin:0;max-width:720px}
+.topic{padding:62px 0 66px;border-bottom:1px solid #d9e2da;scroll-margin-top:88px}
+.topic-kicker{display:flex;align-items:center;gap:12px;color:#7a9587;font:600 11px 'DM Mono',Consolas,monospace;text-transform:uppercase;letter-spacing:.08em}
+.topic-kicker span:first-child{display:grid;place-items:center;width:32px;height:32px;border:1px solid #bfd5c4;border-radius:50%;color:var(--teal)}
+.topic h2{font:600 clamp(33px,4vw,47px)/1.18 'Playfair Display',Georgia,serif;letter-spacing:-.035em;margin:21px 0 14px;color:#1d3932}
+.topic-lead{color:#5f7770;font-size:18px;line-height:1.75;margin:0 0 32px}
+.prose>p{margin:0 0 20px;line-height:1.85;color:#344a46}
+.prose>h3{font-size:19px;letter-spacing:-.025em;margin:40px 0 15px;color:#224e44}
+.prose strong{color:#1d4a40}
+.prose code,.practice-page code{font-family:'DM Mono',Consolas,monospace;font-size:.87em;background:#e8eee8;color:#245d4f;padding:2px 5px;border-radius:4px}
+.prose .code-card code{font-size:inherit;background:transparent;color:inherit;padding:0;border-radius:0}
+.prose p a{color:var(--teal);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.concept-card,.formula-card,.code-card,.example-card,.exercise-card,.lab-card{margin:29px 0 34px}
+.concept-card{background:#eaf2eb;padding:23px 27px}
+.concept-card p{font-size:14px;line-height:1.75}
+.formula-card{padding:24px 28px;border-radius:13px;box-shadow:0 3px 13px rgba(36,70,49,.025)}
+.formula-text{font-size:21px}
+.formula-note{font-size:12px;line-height:1.6}
+.example-card,.exercise-card,.lab-card{box-shadow:0 6px 24px rgba(35,57,45,.035)}
+.example-body{padding:24px}.example-row,.steps li,.example-answer{font-size:14px;line-height:1.7}
+.exercise-card{padding:25px;background:#fffaf0;border-color:#eadbc3}
+.exercise-card h4{font-size:17px}.exercise-card p{font-size:14px;line-height:1.75}
+.reveal-btn{font-size:12px;padding:8px 13px}
+.reveal-content{font-size:13px;line-height:1.7}
+.mark-btn{margin-top:16px;padding:10px 15px}
+.end-link{margin:36px 0 0;font-weight:800;color:var(--teal)}
+.practice-page{max-width:960px;padding:0 36px 110px;margin:auto}
+.practice-intro{padding:64px 0 50px;border-bottom:1px solid var(--line)}
+.practice-section{padding:48px 0 25px;border-bottom:1px solid var(--line)}
+.practice-section>h2{font:600 38px 'Playfair Display',Georgia,serif;color:#1d3932;margin:0 0 26px}
+.practice-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.practice-topic{min-width:0}.practice-topic h3{font-size:14px;margin:0 0 12px;color:var(--teal)}
+.practice-topic h3 a:hover{text-decoration:underline}
+.practice-topic .exercise-card{margin:0 0 14px;min-height:200px}
+.practice-topic .exercise-card h4{font-size:14px}
+.practice-topic .exercise-card p{font-size:13px}
+.search-dialog{background:#fff}.search-result{display:flex;flex-direction:column}
+.toast{z-index:100}
+.bayes-bars{display:grid;gap:11px;margin:23px 0}.bayes-bars>div{display:grid;grid-template-columns:145px 1fr;gap:12px;align-items:center;font-size:12px;color:#426657}.bayes-bars b{display:block;height:17px;border-radius:5px;background:#2d806d;min-width:3px;max-width:100%;transition:width .2s}.bayes-bars>div:nth-child(2) b{background:#d6a46b}
+@media(max-width:1000px){.reading-shell{grid-template-columns:190px minmax(0,1fr);gap:45px;padding:0 30px}.header-inner{gap:20px}.header-nav{gap:14px}}
+@media(max-width:720px){html{scroll-padding-top:105px}.header-inner{height:auto;min-height:58px;display:flex;flex-wrap:wrap;gap:0 12px;padding:8px 18px 0}.brand{font-size:24px}.header-nav{display:flex;order:3;width:100%;gap:18px;overflow-x:auto;white-space:nowrap;margin:0}.header-nav a{padding:10px 0 8px;font-size:12px}.search-trigger{margin-left:auto;min-width:40px;padding:5px 9px}.search-trigger span,.search-trigger kbd{display:none}.reading-shell{display:block;padding:0 18px}.contents{border:0;border-bottom:1px solid var(--line)}.contents-sticky{position:static;padding:13px 0}.contents-label,.aside-practice{display:none}.contents nav{flex-direction:row;overflow-x:auto;gap:5px}.contents nav a{min-width:max-content;padding:7px 9px;font-size:11px}.contents nav a span{display:none}.course-intro{padding:38px 0 36px}.course-intro h1,.practice-intro h1{font-size:47px}.course-intro p,.practice-intro p,.topic-lead{font-size:16px}.topic{padding:43px 0 49px}.topic h2{font-size:36px}.prose>p{font-size:15px}.formula-card{padding:17px}.formula-text{font-size:18px}.practice-page{padding:0 18px 75px}.practice-intro{padding:37px 0}.practice-list{grid-template-columns:1fr}.example-row{grid-template-columns:1fr}.lab-controls label{display:flex}}
+@media(max-width:720px){.contents nav a{display:block;white-space:nowrap;width:max-content;min-width:0;flex:0 0 auto}.contents nav{scrollbar-width:thin}.topic,.reading,.practice-page{min-width:0;overflow-wrap:anywhere}}

@@ -1,34 +1,28 @@
-# Дано — конспекты по статистике и Python
+# Дано — конспекты и практика
 
-**Сайт:** https://1dambek1.github.io/dano_conspects_group/
+[Открыть сайт](https://1dambek1.github.io/dano_conspects_group/)
 
-Статический учебный сайт на русском языке: статистика, базовый Python, pandas, статистика в Python, NumPy и scikit-learn.
+Четыре длинных раздела на русском языке: Python, pandas, вероятность и статистика. Сайт сразу открывает конспект Python. Отдельной главной страницы и footer нет.
 
-## Что внутри
+## Содержание
 
-- 5 разделов и 21 тема с объяснениями, формулами, примерами и задачами.
-- Интерактивные графики распределений и линейной регрессии, таблица pandas, визуализация цикла и индексов NumPy.
-- Задачи с отдельными подсказками и разборами.
-- Учебный файл [`student_scores_80.csv`](student_scores_80.csv) для практики.
+- **Python:** переменные и типы, условия, циклы, списки, функции.
+- **pandas:** чтение CSV, выбор строк и столбцов, очистка, группировка и соединение таблиц.
+- **Вероятность:** исходы, события, сочетания, условная вероятность, полная вероятность и формула Байеса.
+- **Статистика:** среднее, дисперсия, стандартное отклонение и SE; нормальное распределение и доверительные интервалы; t-тесты; ANOVA и χ²; линейная регрессия, веса, гипотезы и интервалы.
+
+После каждой темы идут задачи с отдельными подсказками и решениями. Страница «Практика» собирает задачи в одном месте. Есть интерактивные графики распределений и регрессии, таблица pandas, визуализация цикла и калькулятор Байеса. [Учебный CSV](student_scores_80.csv) содержит 80 строк.
 
 ## Локальный запуск
-
-Откройте терминал в корне проекта:
 
 ```bash
 python -m http.server 8000
 ```
 
-Затем откройте `http://localhost:8000`. Сборка и установка пакетов не нужны. Формулы отображаются через MathJax CDN, для них требуется интернет.
+Откройте http://localhost:8000. Сборка не требуется. Формулы отображаются через MathJax CDN и требуют подключения к интернету. Для выполнения примеров Python нужны `pandas`, `scipy`, `statsmodels` и `scikit-learn`.
 
-Для запуска примеров Python установите библиотеки: `python -m pip install numpy pandas scipy statsmodels scikit-learn matplotlib`.
+## Документация библиотек
 
-## Публикация
+[Python](https://docs.python.org/3/tutorial/) · [pandas](https://pandas.pydata.org/docs/) · [SciPy](https://docs.scipy.org/doc/scipy/reference/stats.html) · [statsmodels](https://www.statsmodels.org/stable/regression) · [scikit-learn](https://scikit-learn.org/stable/)
 
-GitHub Actions публикует статические файлы на GitHub Pages после отправки изменений в `main`. В настройках репозитория Pages должен быть выбран источник **GitHub Actions**.
-
-## Источники API
-
-[Python](https://docs.python.org/3/tutorial/) · [pandas](https://pandas.pydata.org/docs/) · [NumPy](https://numpy.org/doc/stable/) · [SciPy](https://docs.scipy.org/doc/scipy/reference/stats.html) · [statsmodels](https://www.statsmodels.org/stable/regression) · [scikit-learn](https://scikit-learn.org/stable/)
-
-Учебные данные и примеры на сайте вымышлены.
+Учебные данные и примеры вымышлены. GitHub Actions публикует сайт из ветки `main`.
