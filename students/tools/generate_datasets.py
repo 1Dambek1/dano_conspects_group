@@ -1,4 +1,4 @@
-"""Rebuild the four fictional student case-study datasets deterministically."""
+"""Rebuild the fictional student case-study datasets deterministically."""
 
 from __future__ import annotations
 
@@ -200,6 +200,21 @@ for i, origin in enumerate(cities):
             "travel_min": minutes_between(i, j),
         })
 write_csv("04_travel_times.csv", ["origin_id", "destination_id", "travel_min"], times)
+
+# Case 5: positive slopes within both groups, negative slope when pooled.
+# A separate seed preserves the first four datasets across rebuilds.
+simpson_rng = random.Random(20261116)
+simpson_rows = []
+for number in range(1, 101):
+    group = "A" if number <= 50 else "B"
+    if group == "A":
+        x = round(simpson_rng.uniform(2.0, 5.0), 2)
+        y = round(68 + 1.6 * x + simpson_rng.gauss(0, 1.05), 2)
+    else:
+        x = round(simpson_rng.uniform(6.0, 10.0), 2)
+        y = round(24 + 3.5 * x + simpson_rng.gauss(0, 1.35), 2)
+    simpson_rows.append({"id": number, "group": group, "X": x, "Y": y})
+write_csv("05_simpson.csv", ["id", "group", "X", "Y"], simpson_rows)
 
 assert abs(sum(row["probability"] for row in pmf_rows if row["stage"] == "bus") - 1) < 1e-9
 assert abs(sum(row["probability"] for row in pmf_rows if row["stage"] == "metro") - 1) < 1e-9

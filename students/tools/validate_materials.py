@@ -1,4 +1,4 @@
-"""Check the released CSVs for the four student cases."""
+"""Check the released CSVs for the student cases."""
 
 import csv
 from collections import Counter
@@ -59,7 +59,23 @@ assert all(lookup[(a, b)] == lookup[(b, a)] for a, b in lookup)
 assert all(lookup[(city, city)] == 0 for city in city_ids)
 assert Counter(row["city_id"] for row in homes).keys() == city_ids
 
-for filename in ("case-01.md", "case-02.md", "case-03.md", "case-04.md"):
+simpson = read("05_simpson.csv")
+assert len(simpson) == 100
+assert [int(row["id"]) for row in simpson] == list(range(1, 101))
+assert [row["group"] for row in simpson] == ["A"] * 50 + ["B"] * 50
+assert all(0 < float(row["X"]) < 12 and 0 < float(row["Y"]) < 100 for row in simpson)
+
+def slope(rows):
+    x = [float(row["X"]) for row in rows]
+    y = [float(row["Y"]) for row in rows]
+    xbar = sum(x) / len(x)
+    ybar = sum(y) / len(y)
+    return sum((a - xbar) * (b - ybar) for a, b in zip(x, y)) / sum((a - xbar) ** 2 for a in x)
+
+assert 0 < slope(simpson[:50]) < slope(simpson[50:])
+assert slope(simpson) < 0
+
+for filename in ("case-01.md", "case-02.md", "case-03.md", "case-04.md", "case-05.md"):
     assert (ROOT / "assignments" / filename).is_file()
 
-print("PASS: four cases, seven CSVs, assignment files, keys and numeric invariants")
+print("PASS: five cases, eight CSVs, assignment files, keys and numeric invariants")

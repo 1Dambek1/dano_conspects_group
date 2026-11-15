@@ -40,5 +40,5 @@ for(const course of courses){
     }
   }
 }
-assert.equal(assignments,4);
+assert.equal(assignments,5);
 console.log('PASS:',courses.length,'courses,',exercises,'practice tasks,',assignments,'cases,',formulas,'formulas');

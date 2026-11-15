@@ -1,4 +1,4 @@
-// Keep the downloadable student handouts in sync with the website's four cases.
+// Keep the downloadable student handouts in sync with the website's cases.
 const fs=require('fs');
 const path=require('path');
 global.window={COURSES:[]};
