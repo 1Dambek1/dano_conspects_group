@@ -1,0 +1,11 @@
+﻿stage,wait_min,probability
+bus,0,0.08
+bus,2,0.14
+bus,4,0.22
+bus,6,0.26
+bus,8,0.18
+bus,10,0.12
+metro,0,0.2
+metro,1,0.3
+metro,3,0.3
+metro,5,0.2

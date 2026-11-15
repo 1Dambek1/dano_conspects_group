@@ -1,0 +1,22 @@
+.plot-gallery .lab-buttons{gap:7px;margin:12px 0 17px}
+.plot-gallery .lab-button{font-size:12px;padding:8px 11px}
+.plot-gallery svg rect,.plot-gallery svg circle{transition:opacity .18s,filter .18s}
+.plot-gallery svg rect:hover,.plot-gallery svg circle:hover{opacity:1;filter:brightness(.88)}
+.plot-caption{font-size:13px;color:#426657;margin:16px 0 8px}
+.plot-code{white-space:pre-wrap;overflow-x:auto;background:#1d3030;color:#d8ebe3;border-radius:9px;padding:12px 14px;font:12px/1.6 'DM Mono',Consolas,monospace;margin:0}
+.assignment-card{border:1px solid #cdddcf;background:#fffefa;border-radius:17px;padding:25px 27px;margin:28px 0 34px;box-shadow:0 10px 30px rgba(31,75,53,.05)}
+.assignment-top{font:700 11px 'DM Mono',Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:#26806a}
+.assignment-card h3{font:700 20px/1.3 Manrope,Arial,sans-serif;color:#1f473e;margin:12px 0 18px}
+.dataset-links{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+.dataset-links a{display:inline-block;border:1px solid #bad8c7;background:#e9f4ec;color:#246b56;border-radius:9px;padding:8px 10px;font-size:12px;font-weight:800;transition:background .16s,border-color .16s}
+.dataset-links a:hover{background:#d7ecdf;border-color:#79b794}
+.assignment-card ol{list-style:none;counter-reset:case;padding:0;margin:0}
+.assignment-card li{counter-increment:case;border-top:1px solid #e5ece5;display:grid;grid-template-columns:29px 1fr;gap:10px;padding:15px 0;color:#38544d;font-size:14px;line-height:1.75}
+.assignment-card li:before{content:counter(case);display:grid;place-items:center;width:25px;height:25px;background:#e1eee4;color:#256f59;border-radius:50%;font:700 11px 'DM Mono',Consolas,monospace}
+.assignment-deliverable{border-top:1px solid #dce8dd;padding-top:16px;color:#28594b;font-size:13px;line-height:1.7}
+.assignment-deliverable strong{color:#214f42}
+.practice-cases .practice-list{grid-template-columns:1fr}
+.practice-cases .practice-topic{border-bottom:1px solid #dce5dc;padding-bottom:20px}
+.practice-cases .practice-topic h3{font-size:16px}
+.practice-cases .assignment-card{margin:10px 0 0}
+@media(max-width:720px){.assignment-card{padding:19px 17px}.assignment-card li{font-size:13px}.dataset-links a{font-size:11px}.plot-gallery .lab-buttons{display:flex;overflow-x:auto;flex-wrap:nowrap}.plot-gallery .lab-button{flex:0 0 auto}}

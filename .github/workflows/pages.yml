@@ -25,9 +25,10 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Prepare static files
         run: |
-          mkdir -p dist/data
+          mkdir -p dist/data dist/students
           cp index.html styles.css notes.css app.js labs.js favicon.svg student_scores_80.csv dist/
           cp data/*.js dist/data/
+          cp -R students/. dist/students/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
