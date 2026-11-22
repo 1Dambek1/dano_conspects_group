@@ -44,6 +44,6 @@ for(const course of courses){
   if(course.id==='trainer')for(const lesson of course.lessons)for(const file of lesson.datasets||[])assert(fs.existsSync(path.join(root,file.url)),file.url+' missing');
 }
 assert.equal(assignments,5);
-assert.equal(drills,120);
+assert.equal(drills,134);
 assert.equal(projects,11);
 console.log('PASS:',courses.length,'courses,',exercises,'practice tasks,',drills,'drills,',projects,'projects,',assignments,'cases,',formulas,'formulas');
