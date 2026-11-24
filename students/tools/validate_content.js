@@ -21,6 +21,11 @@ for(const course of courses){
   assert.equal(new Set(course.lessons.map(l=>l.id)).size,course.lessons.length);
   for(const lesson of course.lessons){
     assert(lesson.title&&lesson.lead&&lesson.blocks.length);
+    for(const [title,route] of lesson.references||[]){
+      const [courseId,lessonId]=route.split('/');
+      const destination=courses.find(item=>item.id===courseId);
+      assert(title&&destination?.lessons.some(item=>item.id===lessonId),lesson.id+' broken study link: '+route);
+    }
     for(const block of lesson.blocks){
       assert(['p','h','callout','table','formula','code','example','exercise','interactive','assignment','drillset','project'].includes(block.type));
       if(block.type==='exercise'){exercises++;assert(block.title&&block.prompt&&block.hint&&block.solution);}
@@ -44,6 +49,6 @@ for(const course of courses){
   if(course.id==='trainer')for(const lesson of course.lessons)for(const file of lesson.datasets||[])assert(fs.existsSync(path.join(root,file.url)),file.url+' missing');
 }
 assert.equal(assignments,5);
-assert.equal(drills,154);
+assert.equal(drills,322);
 assert.equal(projects,12);
 console.log('PASS:',courses.length,'courses,',exercises,'practice tasks,',drills,'drills,',projects,'projects,',assignments,'cases,',formulas,'formulas');
